@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Reinforcment-learning"
+version = "0.0.0a1"
+requires-python = ">= 3.13"
+description = "IDK"
+dependencies = [
+    "numpy",
+    "pyvirtualdisplay",
+    "imageio",
+    "gymnasium",
+    "matplotlib",
+    "pygame",
+    "torch",
+    "ruff",
+    "structlog"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[tool.setuptools.packages]
+find = { }
+
+[tool.pytest.ini_options]
+pythonpath = "."
+env = []
+
+[tool.ruff]
+exclude = []
+line-length = 140
+indent-width = 4
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = ["ANN002", "ANN003"]
+select = ["E", "F", "W", "ANN", "I", "N", "UP", "YTT", "S", "BLE", "FBT", "B", "A", "COM", "C4", "T10", "EM", "EXE", "ISC", "ICN", "LOG", "G", "INP", "PIE", "T20", "PYI", "PT", "RSE", "RET", "SLF", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "ERA", "R", "TRY", "FLY", "PERF", "FURB", "RUF"]
